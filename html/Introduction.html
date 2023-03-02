@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        body {
+        margin: 0px;
+    }
+
+    #flex-containter {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #Hotbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        background-color: black;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #login {
+        padding: 0;
+        border: none;
+        background: none;
+        color: white;
+    }
+
+    #login:hover {
+        color: red;
+    }
+
+    #Menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(54, 43, 43);
+        height: 125px;
+        align-items: center;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #Phone {
+        margin: none;
+        text-decoration: none;
+        color: white;
+        width: 10%;
+    }
+
+    #Index {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        background-color: rgb(255, 183, 0);
+        height: 50px;
+    }
+
+    #MenuButton {
+        padding: 0;
+        border: none;
+        background: none;
+        font-size: 18px;
+    }
+
+    #MenuButton:hover{
+        color: red;
+    }
+
+    #backToTop {
+        position: fixed;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+    }
+
+    #backToTop:hover {
+        background-color: red;
+        color: white;
+        transition-duration: 0.4s;
+    }
+
+    #container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+
+    #title {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #subTitle {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
+<body>
+    <div id="flex-container">
+        <div id="Hotbar">
+            <div>
+                <i class="fa-sharp fa-regular fa-house" style="color: white"></i>
+                HOME: 319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-clock-three" style="color: white"></i>
+                Open Mon-Fri: 6:30AM to 7PM, Sat: 8AM to 5PM
+            </div>
+            <div>
+                info@themerex.ne
+            </div>
+            <div>
+                <button id="login">Login</button>
+            </div>
+        </div>
+        <div id="Menu">
+            <div id="logo">
+                <a href="C:\Users\Dell\OneDrive\Documents\html\html\MainMenu.html">
+                    <img src=C:\Users\Dell\OneDrive\Documents\html\image\Icon.png>
+                </a>
+            </div>
+            <div>
+                <a id="Phone" href="">Call Us 076 922 0162</a>
+            </div>
+            <div style="color: white">
+                GIỎ HÀNG/Ođ
+            </div>
+            <div></div>
+        </div>
+        <div id="Index">
+            <div>
+                <button id="MenuButton" onclick="location.href='C:/Users/Dell/OneDrive/Documents/html/html/MainMenu.html'"><b>Trang Chủ</b></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='C:/Users/Dell/OneDrive/Documents/html/html/Introduction.html'" id="MenuButton"><b>Giới Thiệu</b></button>
+            </div>
+            <div>
+                <button id="MenuButton"><b>Cửa Hàng</b></button>
+            </div>
+            <div>
+                <button id="MenuButton"><b>Tin Tức</b></button>
+            </div>
+            <div>
+                <button id="MenuButton"><b>Liên hệ</b></button>
+            </div>
+        </div>
+    </div>
+    <div id="container" style="height: 400px;">
+        <img src="C:\Users\Dell\OneDrive\Documents\html\image\four cat banner.jpg" 
+        style="height: 400px; width: 100%; filter: brightness(50%);">
+        <h1 id="title" style="font-size: 40px;">Axiom yêu khách hàng của họ</h1>
+        <div id="subTitle" style="font-size: 25px;">
+            Đó là lý do tại sao chúng tôi tạo ra các thiết kế sáng sủa, bắt mắt và làm cao cấp
+            mã chất lượng để bạn quá hài lòng với các sản phẩm của chúng tôi.
+        </div>
+    </div>
+    <div id="content1">
+
+    </div>
+    <button onclick="topFunction()" id="backToTop">Top</button>
+    <script>
+        let topButton = document.getElementById("backToTop");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\Dell\OneDrive\Documents\html\html\fontawesome-free-6.3.0-web\fontawesome-free-6.3.0-web\css\fontawesome.min.css">
+</head>
+<style>
+    .item1 { grid-area: header; }
+    .item2 { grid-area: word; }
+    .item3 { grid-area: picture; }
+
+    body {
+        margin: 0px;
+    }
+
+    #flex-containter {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #Hotbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        background-color: black;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #login {
+        padding: 0;
+        border: none;
+        background: none;
+        color: white;
+    }
+
+    #login:hover {
+        color: red;
+    }
+
+    #Menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(54, 43, 43);
+        height: 125px;
+        align-items: center;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #Phone {
+        margin: none;
+        text-decoration: none;
+        color: white;
+        width: 10%;
+    }
+
+    #Index {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        background-color: rgb(255, 183, 0);
+        height: 50px;
+    }
+
+    #MenuButton {
+        padding: 0;
+        border: none;
+        background: none;
+        font-size: 18px;
+    }
+
+    #MenuButton:hover{
+        color: red;
+    }
+
+    #cat {
+        background-color: rgb(35, 216, 216);
+        height: 450px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Appointment {
+        margin-top: 50px;
+        background: none;
+        border-color: white;
+        border-width: 3px;
+        color: white;
+        height: 60px;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    #Appointment:hover {
+        background: white;
+        color: black;
+        transition-duration: 0.4s;
+    }
+
+    #form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: white;
+        height: 350px;
+        width: 300px
+    }
+
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #images {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+    }
+
+    #flexImage{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+
+    #content2 {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(255, 183, 0);
+        height: 400px;
+    }
+
+    #textContent{
+        display: flex;
+        width: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #content3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contentWithPic1 {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        width: 70%;
+    }
+
+    #item1 {
+        display: grid;
+        grid-template-columns: 300px 75px;
+        grid-template-areas: 
+            'header picture'
+            'word picture';
+        column-gap: 10px;
+    }
+
+    #item2 {
+        display: grid;
+        grid-template-columns: 75px 300px;
+        grid-template-areas: 
+            'picture header'
+            'picture word';
+        column-gap: 10px;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #footer {
+        background-color: rgb(54, 43, 43);
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #footerButton {
+        background: none;
+        border: none;
+        color: white;
+        padding: 0;
+        font-size: 15px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #footerButton:hover {
+        color:rgb(255, 183, 0);
+    }
+
+    #backToTop {
+        position: fixed;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+    }
+
+    #backToTop:hover {
+        background-color: red;
+        color: white;
+        transition-duration: 0.4s;
+    }
+</style>
+<body>
+    <div id="flex-container">
+        <div id="Hotbar">
+            <div>
+                <i class="fa-sharp fa-regular fa-house" style="color: white"></i>
+                HOME: 319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-clock-three" style="color: white"></i>
+                Open Mon-Fri: 6:30AM to 7PM, Sat: 8AM to 5PM
+            </div>
+            <div>
+                info@themerex.ne
+            </div>
+            <div>
+                <button id="login">Login</button>
+            </div>
+        </div>
+        <div id="Menu">
+            <div id="logo">
+                <a href="C:\Users\Dell\OneDrive\Documents\html\html\MainMenu.html">
+                    <img src=C:\Users\Dell\OneDrive\Documents\html\image\Icon.png>
+                </a>
+            </div>
+            <div>
+                <a id="Phone" href="">Call Us 076 922 0162</a>
+            </div>
+            <div style="color: white">
+                GIỎ HÀNG/Ođ
+            </div>
+            <div></div>
+        </div>
+        <div id="Index">
+            <div>
+                <button id="MenuButton" onclick="location.href='C:/Users/Dell/OneDrive/Documents/html/html/MainMenu.html'"><b>Trang Chủ</b></button>
+            </div>
+            <div>
+                <button onclick="window.location.href='C:/Users/Dell/OneDrive/Documents/html/html/Introduction.html'" id="MenuButton"><b>Giới Thiệu</b></button>
+            </div>
+            <div>
+                <button id="MenuButton"><b>Cửa Hàng</b></button>
+            </div>
+            <div>
+                <button id="MenuButton"><b>Tin Tức</b></button>
+            </div>
+            <div>
+                <button id="MenuButton"><b>Liên hệ</b></button>
+            </div>
+        </div>
+        <div id="cat">
+            <div id="text">
+                <h1 style="margin: 0px; color: white; font-size: 40px;">Bệnh viện động vật</h1>
+                <div style="color: white; font-size: 40px; margin-top: 30px; margin-bottom: 30px">Kiểm tra lần đầu</div>
+                <div style="color: white; font-size: 20px;">Mạng lưới trung tâm thú y</div>
+                <div style="color: white; font-size: 20px; margin-top: 10px"><b>Năng lực và chuyên môn cao</b></div>
+                <button id="Appointment"><b>ĐẶT CUỘC HẸN</b></button>
+            </div>
+            <img src="C:\Users\Dell\OneDrive\Documents\html\image\slider-cat.png" height="400" width="500">
+            <div>
+                <form id="form">
+                    <div style="font-size: 30px;"><b>TƯ VẤN MIỄN PHÍ</b></div>
+                    <input type="text" placeholder="Email" style="width: 80%; height: 20px; background-color: rgb(220, 217, 212)">
+                    <input type="text" placeholder="Họ và tên" style="width: 80%; height: 20px; background-color: rgb(220, 217, 212);">
+                    <textarea rows="7" cols="31" placeholder="Lời nhắn" style="background-color: rgb(220, 217, 212)"></textarea>
+                    <div>
+                        <button style="width: 250px; height: 30px; background-color: rgb(84, 214, 84); color: white">
+                            <b>Gửi</b>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="content">
+            <h1 style="margin-top: 100px; font-size: 50px;">Chúng tôi làm gì?</h1>
+            <div style="font-size: 20px; margin-top: 20px;">Thú cưng của bạn đang ở trong tay tốt với đội ngũ chuyên nghiệp của chúng tôi.</div>
+            <div style="font-size: 20px; margin-top: 15px;">Chúng tôi luôn đề cao chất lượng và dịch vụ hàng đầu</div>
+            <div id="images">
+                <img id="flexImage" src="C:\Users\Dell\OneDrive\Documents\html\image\dogs.jpg">
+                <img id="flexImage" src="C:\Users\Dell\OneDrive\Documents\html\image\my-cat.jpg">
+                <img id="flexImage" src="C:\Users\Dell\OneDrive\Documents\html\image\mouse.jpg">
+                <img id="flexImage" src="C:\Users\Dell\OneDrive\Documents\html\image\parrot.jpg">
+            </div>
+        </div>
+        <div id="content2">
+            <img src="C:\Users\Dell\OneDrive\Documents\html\image\SleepCat.png">
+            <div id="textContent">
+                <div style="font-size: 50px; margin-right: 0px"><b>chúng tôi là ai</b></div>
+                <div style="margin-top: 50px; margin-right: 0px; width: 70%; text-align: center; font-size: 18px;">Chăm sóc thú cưng không chỉ là những gì chúng ta làm, mà là những gì chúng ta yêu thích và đam mê. Chúng tôi cung cấp cho thú cưng của bạn an toàn, thoải mái cho thú cưng và các dịch vụ dưới sự giám sát 24/7.</div>
+            </div>
+        </div>
+        <div id="content3">
+            <h1 style="font-size: 45px; margin-top: 90px; text-align: center;">Chúng tôi yêu thú cưng của bạn</h1>
+            <div style="text-align: center; margin-top: 30px; font-size: 20px;">
+                Công ty chúng tôi sẽ làm thú cưng của bạn được hạnh phúc.
+                <br>Hãy để thú cưng của bạn đạt được mức độ chăm sóc cao nhất từ các chuyên gia của chúng tôi
+            </div>
+            <div id="contentWithPic1">
+                <div id="container">
+                    <div id="item1">
+                        <h2 class="item1" style="display:inline-block; text-align: right;">điều trị thú cưng</h2>
+                        <img class="item3" src="C:\Users\Dell\OneDrive\Documents\html\image\1.png">
+                        <div class="item2" style="text-align: right">
+                            Chăm sóc thú cưng không chỉ là những gì chúng ta làm, mà là những gì chúng ta yêu thích và đam mê.
+                        </div>
+                    </div>
+                    <div id="item1">
+                        <h2 class="item1" style="display:inline-block; text-align: right">chải chuốt</h2>
+                        <img class="item3" src="C:\Users\Dell\OneDrive\Documents\html\image\2.png">
+                        <div class="item2" style="text-align: right">
+                            Đội ngũ các nhà tạo mẫu tóc thú cưng của chúng tôi rất vui khi làm cho con vật yêu quý của bạn trông thật xinh đẹp.
+                        </div>
+                    </div>
+                    <div id="item1">
+                        <h2 class="item1" style="display:inline-block; text-align: right">cửa hàng</h2>
+                        <img class="item3" src="C:\Users\Dell\OneDrive\Documents\html\image\3.png">
+                        <div class="item2" style="text-align: right;">
+                            Nhận các phụ kiện thú cưng tốt nhất trong cửa hàng của chúng tôi để chăm sóc thú cưng của bạn và làm cho nó hạnh phúc.
+                        </div>
+                    </div>
+                </div>
+                <img src="C:\Users\Dell\OneDrive\Documents\html\image\home_responsive_3.jpg" style="width: 300px; height: 500px;">
+                <div id="container">
+                    <div id="item2">
+                        <h2 class="item1" style="display:inline-block; text-align: left;">cho thú cưng</h2>
+                        <img class="item3" src="C:\Users\Dell\OneDrive\Documents\html\image\6.png">
+                        <div class="item2" style="text-align: left">
+                            Nếu bạn đang cân nhắc việc nuôi thú cưng, chúng tôi sẽ hướng dẫn bạn cách làm cho cuộc sống của anh ấy thoải mái.
+                        </div>
+                    </div>
+                    <div id="item2">
+                        <h2 class="item1" style="display:inline-block; text-align: left;">khách sạn thú cưng</h2>
+                        <img class="item3" src="C:\Users\Dell\OneDrive\Documents\html\image\4.png">
+                        <div class="item2" style="text-align: left">
+                            Chúng tôi cung cấp cho thú cưng của bạn an toàn, thoải mái cho thú cưng và các dịch vụ dưới sự giám sát 24/7.
+                        </div>
+                    </div>
+                    <div id="item2">
+                        <h2 class="item1" style="display:inline-block; text-align: left;">thú y</h2>
+                        <img class="item3" src="C:\Users\Dell\OneDrive\Documents\html\image\5.png">
+                        <div class="item2" style="text-align: left;">
+                            Chúng tôi cung cấp nhiều dịch vụ y tế cho thú cưng yêu quý của bạn để sống cuộc sống hạnh phúc lâu dài trong nhà của bạn.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer" style="margin-top: 20px;">
+            <div id="logo" style="margin-top: 40px;">
+                <a href="C:\Users\Dell\OneDrive\Documents\html\html\MainMenu.html">
+                    <img src="C:\Users\Dell\OneDrive\Documents\html\image\Icon.png" style="width: 80px; height: 70px">
+                </a>
+                <div style="color: white; width: 60%; margin-top: 15px">
+                    Thú cưng của bạn đang ở trong tay tốt với đội ngũ bác sĩ thú y, chú rể và huấn luyện viên chuyên nghiệp của chúng tôi. Chúng tôi cung cấp động vật của bạn chỉ là một dịch vụ chất lượng hàng đầu.
+                </div>
+            </div>
+            <div style="margin-top: 20px">
+                <h2 style="color: white"><b>Liên hệ</b></h2>
+                <div style="color: white; width: 70%;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
+                <button id="footerButton">076 922 0162</button>
+                <button id="footerButton">demonhunterg@gmail.com</button>
+                <button id="footerButton">mon@mona.media</button>
+                <button id="footerButton">demonhunterp</button>
+            </div>
+            <div style="margin-top: 20px">
+                <h2 style="color: white"><b>Hỗ trợ</b></h2>
+                <button id="footerButton">FAQ</button>
+                <button id="footerButton">Chăm sóc khách hàng</button>
+                <button id="footerButton">Vận chuyển và Đổi trả hàng</button>
+                <button id="footerButton">Liên hệ</button>
+            </div>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="backToTop">Top</button>
+    <script>
+        let topButton = document.getElementById("backToTop");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topButton.style.display = "block";
+            } else {
+                topButton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

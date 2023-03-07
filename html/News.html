@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .item1 { grid-area: image; }
+    .item2 { grid-area: word; }
+    .NewsGrid { grid-area: buttons; }
+
+    body {
+        margin: 0px;
+    }
+
+    #Hotbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: white;
+        background-color: black;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #login {
+        padding: 0;
+        border: none;
+        background: none;
+        color: white;
+    }
+
+    #login:hover {
+        color: red;
+    }
+
+    #Menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgb(54, 43, 43);
+        height: 125px;
+        align-items: center;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #Phone {
+        margin: none;
+        text-decoration: none;
+        color: white;
+        width: 10%;
+    }
+
+    #Index {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        background-color: rgb(255, 183, 0);
+        height: 50px;
+    }
+
+    #MenuButton {
+        padding: 0;
+        border: none;
+        background: none;
+        font-size: 18px;
+    }
+
+    #MenuButton:hover{
+        color: red;
+    }
+
+    #content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    #searchBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    #News {
+        background: none;
+        border: none;
+        margin-top: 20px;
+        display: grid;
+        grid-template-areas: 'image word';
+        grid-template-columns: 65px 117px;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #News:hover{
+        color: red;
+    }
+
+    #NewsDisplay {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto auto;
+        column-gap: 40px;
+        row-gap: 30px;
+    }
+
+    #NewsButton {
+        height: 320px;
+        width: 300px;
+        background: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    #NewsButton:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.5)
+    }
+
+    #footer {
+        background-color: rgb(54, 43, 43);
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #footerButton {
+        background: none;
+        border: none;
+        color: white;
+        padding: 0;
+        font-size: 15px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #footerButton:hover {
+        color:rgb(255, 183, 0);
+    }
+
+    #backToTop {
+        position: fixed;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+    }
+
+    #backToTop:hover {
+        background-color: red;
+        color: white;
+        transition-duration: 0.4s;
+    }
+</style>
+<body>
+    <div id="Hotbar">
+        <div>
+            <i class="fa-sharp fa-regular fa-house" style="color: white"></i>
+            HOME: 319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-clock-three" style="color: white"></i>
+            Open Mon-Fri: 6:30AM to 7PM, Sat: 8AM to 5PM
+        </div>
+        <div>
+            info@themerex.ne
+        </div>
+        <div>
+            <button id="login">Login</button>
+        </div>
+    </div>
+    <div id="Menu">
+        <div id="logo">
+            <a href="..\html\MainMenu.html">
+                <img src=..\image\Icon.png>
+            </a>
+        </div>
+        <div>
+            <a id="Phone" href="">Call Us 076 922 0162</a>
+        </div>
+        <div style="color: white">
+            GIỎ HÀNG/Ođ
+        </div>
+        <div></div>
+    </div>
+    <div id="Index">
+        <div>
+            <button id="MenuButton" onclick="location.href='../html/MainMenu.html'"><b>Trang Chủ</b></button>
+        </div>
+        <div>
+            <button onclick="window.location.href='../html/Introduction.html'" id="MenuButton"><b>Giới Thiệu</b></button>
+        </div>
+        <div>
+            <button id="MenuButton"><b>Cửa Hàng</b></button>
+        </div>
+        <div>
+            <button onclick="window.location.href='../html/News.html'" id="MenuButton"><b>Tin Tức</b></button>
+        </div>
+        <div>
+            <button id="MenuButton"><b>Liên hệ</b></button>
+        </div>
+    </div>
+    <div>
+        <h1 style="text-align: center">Tin tức</h1>
+        <div id="content">
+            <div id="searchBox">
+                <div style="display: flex; flex-direction: row;">
+                    <input type="text" placeholder="Tìm kiếm..." style="height: 30px; font-size:15px;">
+                    <input type="image" src="../image/magnifying glass.png" style="width: 35px; height: 35px; background-color: rgb(255, 183, 0);">
+                </div>
+                <div style="margin-top: 30px; width: 90%;">
+                    <div style="box-shadow: 0 0 11px rgba(33,33,33,.2)">
+                        <div style="background-color: rgb(252, 109, 109); height: 15px; color: white; padding: 20px; font-size: 18px;">
+                            <b>BÀI VIẾT MỚI</b>
+                        </div>
+                        <button id="News">
+                            <img class="item1" src="../image/Nursing.jpg" style="border-radius: 50%; height: 50px; width: 60px">
+                            <div class="item2"><b>Lịch tiêm phòng cho chó</b></div>
+                        </button>
+                        <button id="News">
+                            <img class="item1" src="../image/Family.jpg" style="border-radius: 50%; height: 50px; width: 60px">
+                            <div class="item2"><b>Một khoảnh khắc tạm thời</b></div>
+                        </button>
+                        <button id="News">
+                            <img class="item1" src="../image/pets3-1170x965.jpg" style="border-radius: 50%; height: 50px; width: 60px">
+                            <div class="item2"><b>Chăm sóc mắt cho chó</b></div>
+                        </button>
+                        <button id="News">
+                            <img class="item1" src="../image/mouse.jpg" style="border-radius: 50%; height: 50px; width: 60px">
+                            <div class="item2"><b>Giống Hamster: Cái nào phù hợ...</b></div>
+                        </button>
+                        <button id="News">
+                            <img class="item1" src="../image/parrot.jpg" style="border-radius: 50%; height: 50px; width: 60px">
+                            <div class="item2"><b>Chăm sóc mỏ chim của bạn</b></div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="NewsDisplay">
+                <button id="NewsButton">
+                    <img src="../image/Nursing.jpg" style="width: 100%">
+                    <h3 style="text-align: left; margin-left: 20px; font-size: 20px;">Lịch tiêm phòng cho chó</h3>
+                    <div style="text-align: left; margin-left: 20px; font-size: 17px; width: 89%;">
+                        Lịch tiêm phòng cho chó qua nhiều năm, nhằm mang đến niềm vui...
+                    </div>
+                </button>
+                <button id="NewsButton">
+                    <img src="../image/Family.jpg" style="width: 100%; height: 205px;">
+                    <h3 style="text-align: left; margin-left: 20px; font-size: 20px;">Một khoảnh khắc tạm thời</h3>
+                    <div style="text-align: left; margin-left: 20px; font-size: 17px; width: 90%;">
+                        Một khoảnh khắc tạm thời đối với giá của một cái hồ, ti-vi khối lượn...
+                    </div>
+                </button>
+                <button id="NewsButton">
+                    <img src="../image/pets3-1170x965.jpg" style="width: 100%; height: 205px;">
+                    <h3 style="text-align: left; margin-left: 20px; font-size: 20px;">Chăm sóc mắt cho chó</h3>
+                    <div style="text-align: left; margin-left: 20px; font-size: 17px; width: 90%;">
+                        Theo các nghiên cứu khoa học cho biết rằng, ở loài chó, thị giác sẽ...
+                    </div>
+                </button>
+                <button id="NewsButton">
+                    <img src="../image/mouse.jpg" style="width: 100%; height: 205px;">
+                    <h3 style="text-align: left; margin-left: 20px; font-size: 20px; margin-right: 10px;">Giống Hamster: Cái nào phù hợp với tôi?</h3>
+                    <div style="text-align: left; margin-left: 20px; font-size: 17px; width: 90%;">
+                        Trên thị trường ngày nay, đang c...
+                    </div>
+                </button>
+                <button id="NewsButton">
+                    <img src="../image/parrot.jpg" style="width: 100%; height: 205px;">
+                    <h3 style="text-align: left; margin-left: 20px; font-size: 20px;">Chăm sóc mỏ chim của bạn</h3>
+                    <div style="text-align: left; margin-left: 20px; font-size: 17px; width: 90%;">
+                        Mỏ chim là một bộ phận quan trọng đối với các loài chim...
+                    </div>
+                </button>
+                <button id="NewsButton">
+                    <img src="../image/my-cat.jpg" style="width: 100%; height: 205px;">
+                    <h3 style="text-align: left; margin-left: 20px; font-size: 20px;">Tiêm cillum</h3>
+                    <div style="text-align: left; margin-left: 20px; font-size: 17px; width: 90%;">
+                        Một mũi cillum có thể giúp cho thú cưng của bạn có sức đề kháng...
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="margin-top: 100px;">
+        <div id="logo" style="margin-top: 40px;">
+            <a href="..\html\MainMenu.html">
+                <img src="..\image\Icon.png" style="width: 80px; height: 70px">
+            </a>
+            <div style="color: white; width: 60%; margin-top: 15px">
+                Thú cưng của bạn đang ở trong tay tốt với đội ngũ bác sĩ thú y, chú rể và huấn luyện viên chuyên nghiệp của chúng tôi. Chúng tôi cung cấp động vật của bạn chỉ là một dịch vụ chất lượng hàng đầu.
+            </div>
+        </div>
+        <div style="margin-top: 20px">
+            <h2 style="color: white"><b>Liên hệ</b></h2>
+            <div style="color: white; width: 70%;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
+            <button id="footerButton">076 922 0162</button>
+            <button id="footerButton">demonhunterg@gmail.com</button>
+            <button id="footerButton">mon@mona.media</button>
+            <button id="footerButton">demonhunterp</button>
+        </div>
+        <div style="margin-top: 20px">
+            <h2 style="color: white"><b>Hỗ trợ</b></h2>
+            <button id="footerButton">FAQ</button>
+            <button id="footerButton">Chăm sóc khách hàng</button>
+            <button id="footerButton">Vận chuyển và Đổi trả hàng</button>
+            <button id="footerButton">Liên hệ</button>
+        </div>
+    </div>
+</div>
+<button onclick="topFunction()" id="backToTop">Top</button>
+<script>
+    let topButton = document.getElementById("backToTop");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

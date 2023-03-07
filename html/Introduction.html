@@ -113,6 +113,82 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    #content1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contentItems {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #item {
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #content2 {
+        height: 500px;
+        width: 100%;
+        background-color: rgb(114, 179, 1);
+        margin-top: 100px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #content2Button {
+        margin-top: 30px;
+        height: 50px;
+        width: 130px;
+        font-size: 20px;
+        background: none;
+        border-color: white;
+        color: white;
+    }
+
+    #content2Button:hover {
+        background-color: white;
+        color: black;
+        transition-duration: 0.4s;
+    }
+
+    #textContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        width: 100%;
+        margin-top: 70px;
+    }
+
+    #footer {
+        background-color: rgb(54, 43, 43);
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #footerButton {
+        background: none;
+        border: none;
+        color: white;
+        padding: 0;
+        font-size: 15px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #footerButton:hover {
+        color:rgb(255, 183, 0);
+    }
 </style>
 <body>
     <div id="flex-container">
@@ -134,8 +210,8 @@
         </div>
         <div id="Menu">
             <div id="logo">
-                <a href="C:\Users\Dell\OneDrive\Documents\html\html\MainMenu.html">
-                    <img src=C:\Users\Dell\OneDrive\Documents\html\image\Icon.png>
+                <a href="..\html\MainMenu.html">
+                    <img src=..\image\Icon.png>
                 </a>
             </div>
             <div>
@@ -148,16 +224,16 @@
         </div>
         <div id="Index">
             <div>
-                <button id="MenuButton" onclick="location.href='C:/Users/Dell/OneDrive/Documents/html/html/MainMenu.html'"><b>Trang Chủ</b></button>
+                <button id="MenuButton" onclick="location.href='../html/MainMenu.html'"><b>Trang Chủ</b></button>
             </div>
             <div>
-                <button onclick="window.location.href='C:/Users/Dell/OneDrive/Documents/html/html/Introduction.html'" id="MenuButton"><b>Giới Thiệu</b></button>
+                <button onclick="window.location.href='../html/Introduction.html'" id="MenuButton"><b>Giới Thiệu</b></button>
             </div>
             <div>
                 <button id="MenuButton"><b>Cửa Hàng</b></button>
             </div>
             <div>
-                <button id="MenuButton"><b>Tin Tức</b></button>
+                <button onclick="window.location.href='../html/News.html'" id="MenuButton"><b>Tin Tức</b></button>
             </div>
             <div>
                 <button id="MenuButton"><b>Liên hệ</b></button>
@@ -165,7 +241,7 @@
         </div>
     </div>
     <div id="container" style="height: 400px;">
-        <img src="C:\Users\Dell\OneDrive\Documents\html\image\four cat banner.jpg" 
+        <img src="..\image\four cat banner.jpg" 
         style="height: 400px; width: 100%; filter: brightness(50%);">
         <h1 id="title" style="font-size: 40px;">Axiom yêu khách hàng của họ</h1>
         <div id="subTitle" style="font-size: 25px;">
@@ -174,7 +250,76 @@
         </div>
     </div>
     <div id="content1">
-
+        <h1 style="margin-top: 80px; font-size: 50px;">Vài nét về Pet Care</h1>
+        <div style="text-align: center; font-size: 20px; margin-top: 30px;">
+            Mua sản phẩm từ Axiom có nghĩa là giao phó
+            <br>danh tiếng của bạn đến một trong những studio web tốt nhất.
+        </div>
+        <div id="contentItems">
+            <div id="item">
+                <img src="..\image\Arrow.png" style="width: 50px; height: 50px;">
+                <div style="margin: 20px; font-size: 25px;">
+                    <b>Phù hợp cho bất kỳ mục đích nào</b>
+                </div>
+                <div style="width: 80%; text-align: center; font-size: 18px;">
+                    Công ty Axiom thực hiện công việc của mình với một khách hàng, chúng tôi đảm bảo rằng chủ đề Thú cưng sẽ là bất kỳ loại trang web nào bạn muốn.
+                </div>
+            </div>
+            <div id="item">
+                <img src="..\image\Computer.png" style="width: 50px; height: 50px;">
+                <div style="margin: 20px; font-size: 25px;">
+                    <b>Đáp ứng 100%</b>
+                </div>
+                <div style="width: 80%; text-align: center; font-size: 18px;">
+                    Thú cưng sẽ tự động được điều chỉnh theo bất kỳ độ phân giải nào mà bạn không phải lo lắng về việc tạo phiên bản cho mỗi màn hình.
+                </div>
+            </div>
+            <div id="item">
+                <img src="..\image\Plane.png" style="width: 50px; height: 50px;">
+                <div style="margin: 20px; font-size: 25px;">
+                    <b>Cập nhật và hỗ trợ miễn phí</b>
+                </div>
+                <div style="width: 80%; text-align: center; font-size: 18px;">
+                    Chúng tôi tạo ra các chủ đề của chúng tôi với suy nghĩ của khách hàng, do đó nhóm của chúng tôi làm việc chăm chỉ để cung cấp cho bạn sự hỗ trợ kỹ thuật tốt nhất trên thế giới.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="content2">
+        <div id="textContainer">
+            <div style="color:rgb(54, 43, 43); font-size: 20px;"><b>CHÚNG TÔI LÀ AI, CHÚNG TÔI LÀM GÌ</b></div>
+            <div style="margin-top: 20px; font-size: 60px;">Chúng tôi là ai</div>
+            <div style="width: 70%; margin-top: 40px; text-align: center; font-size: 20px;">
+                Mua sản phẩm web từ công ty Axiom có nghĩa là giao phó danh tiếng của bạn cho một trong những studio web tốt nhất trong lĩnh vực này. Nhóm của chúng tôi tạo ra các chủ đề của chúng tôi với suy nghĩ của khách hàng, do đó bộ óc sáng tạo của chúng tôi làm việc chăm chỉ để cung cấp cho bạn sự hỗ trợ kỹ thuật tốt nhất trên toàn thế giới.
+            </div>
+            <button onclick="window.location.href='../html/News.html'" id="content2Button"><b>Nhiều hơn</b></button>
+        </div>
+        <img src="../image/human and dog.jpg">
+    </div>
+    <div id="footer">
+        <div id="logo" style="margin-top: 40px;">
+            <a href="..\html\MainMenu.html">
+                <img src="..\image\Icon.png" style="width: 80px; height: 70px">
+            </a>
+            <div style="color: white; width: 60%; margin-top: 15px">
+                Thú cưng của bạn đang ở trong tay tốt với đội ngũ bác sĩ thú y, chú rể và huấn luyện viên chuyên nghiệp của chúng tôi. Chúng tôi cung cấp động vật của bạn chỉ là một dịch vụ chất lượng hàng đầu.
+            </div>
+        </div>
+        <div style="margin-top: 20px">
+            <h2 style="color: white"><b>Liên hệ</b></h2>
+            <div style="color: white; width: 70%;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
+            <button id="footerButton">076 922 0162</button>
+            <button id="footerButton">demonhunterg@gmail.com</button>
+            <button id="footerButton">mon@mona.media</button>
+            <button id="footerButton">demonhunterp</button>
+        </div>
+        <div style="margin-top: 20px">
+            <h2 style="color: white"><b>Hỗ trợ</b></h2>
+            <button id="footerButton">FAQ</button>
+            <button id="footerButton">Chăm sóc khách hàng</button>
+            <button id="footerButton">Vận chuyển và Đổi trả hàng</button>
+            <button id="footerButton">Liên hệ</button>
+        </div>
     </div>
     <button onclick="topFunction()" id="backToTop">Top</button>
     <script>

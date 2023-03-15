@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../html/fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/css/all.css">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: row;
+        height: 745px;
+    }
+
+    #navigation {
+        display: flex;
+        display: fixed;
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFCA44;
+        width: 250px;
+        gap: 50px;
+        padding-top: 100px;
+    }
+
+    #navButton {
+        width: auto;
+        height: auto;
+        padding: 0px;
+        border: none;
+        background: none;
+    }
+
+    #navButton:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #Banner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 120px;
+        width: 100%;
+        background-color: #302021;
+    }
+
+    #login {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <div id="navigation">
+            <button onclick="showDiv(0)" id="navButton"><i class="fa-sharp fa-solid fa-house fa-2xl"></i>
+                <div style="margin-top: 5px; font-size: 20px;"><b>Home</b></div>
+            </button>
+            <button onclick="showDiv(1)" id="navButton"><i class="fa-sharp fa-solid fa-chart-simple fa-2xl"></i>
+                <div style="margin-top: 5px; font-size: 20px;"><b>Chart</b></div>
+            </button>
+            <button onclick="showDiv(2)" id="navButton"><i class="fa-sharp fa-solid fa-message fa-2xl"></i>
+                <div style="margin-top: 5px; font-size: 20px;"><b>Messages</b></div>
+            </button>
+            <button onclick="showDiv(3)" id="navButton"><i class="fa-sharp fa-solid fa-phone fa-2xl"></i>
+                <div style="margin-top: 5px; font-size: 20px"><b>Contact</b></div>
+            </button>
+            <button onclick="showDiv(4)" id="navButton"><i class="fa-sharp fa-solid fa-pager fa-2xl"></i>
+                <div style="margin-top: 5px; font-size: 20px;"><b>Web Controller</b></div>
+            </button>
+        </div>
+        <div id="content">
+            <div  class="content">
+                <div id="Banner">
+                    <img src="../image/Icon.png">
+                </div>
+            </div>
+            <div  class="content">2</div>
+            <div  class="content">3</div>
+            <div  class="content">4</div>
+            <div  class="content">5</div>
+        </div>
+
+        <script>
+            showDiv(0);
+
+            function showDiv(n) {
+                var x = document.getElementsByClassName("content");
+                for (var i = 0; i < x.length; i++) {
+                    if (i != n) x[i].style.display = "none";
+                    else x[i].style.display = "block";
+                }
+            }
+        </script>
+    </div>
+
+    <div id="login">
+
+    </div>
+
+    <script>
+        var page = document.getElementById("wrapper");
+        page.style.display = "none";
+    </script>
+
+</body>
+</html>

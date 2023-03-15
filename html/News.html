@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\html\fontawesome-free-6.3.0-web\fontawesome-free-6.3.0-web\css\all.min.css">
     <title>Document</title>
 </head>
 <style>
     .item1 { grid-area: image; }
     .item2 { grid-area: word; }
     .NewsGrid { grid-area: buttons; }
+
+    .footerItem1 { grid-area: icon1; }
+    .footerItem2 { grid-area: text1; }
+    .footerItem3 { grid-area: icon2; }
+    .footerItem4 { grid-area: text2; }
+    .footerItem5 { grid-area: icon3; }
+    .footerItem6 { grid-area: text3; }
+    .footerItem7 { grid-area: icon4; }
+    .footerItem8 { grid-area: text4; }
+    .footerItem9 { grid-area: text5; }
 
     body {
         margin: 0px;
@@ -19,8 +30,8 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
-        color: white;
-        background-color: black;
+        color: #6C6465;
+        background-color: #261A1B;
         height: 30px;
         font-size: 15px;
     }
@@ -29,18 +40,19 @@
         padding: 0;
         border: none;
         background: none;
-        color: white;
+        color: #6C6465;
     }
 
     #login:hover {
         color: red;
+        cursor: pointer;
     }
 
     #Menu {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        background-color: rgb(54, 43, 43);
+        background-color: #302021;
         height: 125px;
         align-items: center;
     }
@@ -62,7 +74,7 @@
         justify-content: center;
         gap: 100px;
         align-items: center;
-        background-color: rgb(255, 183, 0);
+        background-color: #FFCA44;
         height: 50px;
     }
 
@@ -71,10 +83,12 @@
         border: none;
         background: none;
         font-size: 18px;
+        color: #594129;
     }
 
     #MenuButton:hover{
         color: red;
+        cursor: pointer;
     }
 
     #content {
@@ -107,6 +121,7 @@
 
     #News:hover{
         color: red;
+        cursor: pointer;
     }
 
     #NewsDisplay {
@@ -128,11 +143,12 @@
     }
 
     #NewsButton:hover {
-        box-shadow: 0 0 11px rgba(33,33,33,.5)
+        box-shadow: 0 0 11px rgba(33,33,33,.5);
+        cursor: pointer;
     }
 
     #footer {
-        background-color: rgb(54, 43, 43);
+        background-color: #302021;
         height: 300px;
         width: 100%;
         display: flex;
@@ -143,7 +159,7 @@
     #footerButton {
         background: none;
         border: none;
-        color: white;
+        color: #A4A4A4;
         padding: 0;
         font-size: 15px;
         margin-top: 10px;
@@ -151,7 +167,21 @@
     }
 
     #footerButton:hover {
-        color:rgb(255, 183, 0);
+        color:#FFCD4C;
+        cursor: pointer;
+    }
+
+    #footer-grid {
+        display: grid;
+        grid-template-areas: 
+            'icon1 text1'
+            'icon2 text2'
+            'icon3 text3'
+            'icon3 text5'
+            'icon4 text4';
+        grid-template-rows: 40px 20px 20px 20px;
+        column-gap: 15px;
+        row-gap: 7px;
     }
 
     #backToTop {
@@ -162,28 +192,32 @@
         bottom: 20px;
         right: 20px;
         border-radius: 50%;
+        border: 1px solid black;
     }
 
     #backToTop:hover {
         background-color: red;
         color: white;
         transition-duration: 0.4s;
+        cursor: pointer;
     }
 </style>
 <body>
     <div id="Hotbar">
         <div>
-            <i class="fa-sharp fa-regular fa-house" style="color: white"></i>
+            <i class="fa-sharp fa-solid fa-house"></i>
             HOME: 319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM
         </div>
         <div>
-            <i class="fa-sharp fa-solid fa-clock-three" style="color: white"></i>
+            <i class="fa-sharp fa-solid fa-clock"></i>
             Open Mon-Fri: 6:30AM to 7PM, Sat: 8AM to 5PM
         </div>
         <div>
+            <i class="fa-sharp fa-solid fa-envelope"></i>
             info@themerex.ne
         </div>
         <div>
+            <i class="fa-sharp fa-solid fa-arrow-right"></i>
             <button id="login">Login</button>
         </div>
     </div>
@@ -194,12 +228,10 @@
             </a>
         </div>
         <div>
-            <a id="Phone" href="">Call Us 076 922 0162</a>
+            <a id="Phone" href="">Call Us 076 922 0162 <i class="fa-sharp fa-solid fa-phone-volume fa-xl" style="color: #FFCD4C"></i></a>               
         </div>
-        <div style="color: white">
-            GIỎ HÀNG/Ođ
-        </div>
-        <div></div>
+        <div style="color: white">GIỎ HÀNG/Ođ <i class="fa-sharp fa-solid fa-cart-shopping" style="color:#FFCD4C"></i></div>
+        <div><i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #FFCD4C"></i></div>
     </div>
     <div id="Index">
         <div>
@@ -215,7 +247,7 @@
             <button onclick="window.location.href='../html/News.html'" id="MenuButton"><b>Tin Tức</b></button>
         </div>
         <div>
-            <button id="MenuButton"><b>Liên hệ</b></button>
+            <button onclick="window.location.href='../html/Contact.html'" id="MenuButton"><b>Liên hệ</b></button>
         </div>
     </div>
     <div>
@@ -224,7 +256,7 @@
             <div id="searchBox">
                 <div style="display: flex; flex-direction: row;">
                     <input type="text" placeholder="Tìm kiếm..." style="height: 30px; font-size:15px;">
-                    <input type="image" src="../image/magnifying glass.png" style="width: 35px; height: 35px; background-color: rgb(255, 183, 0);">
+                    <input type="image" src="../image/magnifying glass.png" style="width: 35px; height: 35px;">
                 </div>
                 <div style="margin-top: 30px; width: 90%;">
                     <div style="box-shadow: 0 0 11px rgba(33,33,33,.2)">
@@ -305,17 +337,23 @@
             <a href="..\html\MainMenu.html">
                 <img src="..\image\Icon.png" style="width: 80px; height: 70px">
             </a>
-            <div style="color: white; width: 60%; margin-top: 15px">
+            <div style="color: #A4A4A4; width: 60%; margin-top: 15px">
                 Thú cưng của bạn đang ở trong tay tốt với đội ngũ bác sĩ thú y, chú rể và huấn luyện viên chuyên nghiệp của chúng tôi. Chúng tôi cung cấp động vật của bạn chỉ là một dịch vụ chất lượng hàng đầu.
             </div>
         </div>
         <div style="margin-top: 20px">
             <h2 style="color: white"><b>Liên hệ</b></h2>
-            <div style="color: white; width: 70%;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
-            <button id="footerButton">076 922 0162</button>
-            <button id="footerButton">demonhunterg@gmail.com</button>
-            <button id="footerButton">mon@mona.media</button>
-            <button id="footerButton">demonhunterp</button>
+            <div id="footer-grid">
+                <div class="footerItem1"><i class="fa-sharp fa-solid fa-location-dot" style="color:white"></i></div>
+                <div class="footerItem2" style="color: #A4A4A4; width: 70%; text-align: left; margin: 0px;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
+                <div class="footerItem3"><i class="fa-sharp fa-solid fa-phone" style="color: white"></i></div>
+                <button class="footerItem4" id="footerButton" style="margin: 0px; text-align: left;">076 922 0162</button>
+                <div class="footerItem5" style="color: white;"><i class="fa-sharp fa-solid fa-envelope"></i></div>
+                <button class="footerItem6" id="footerButton" style="margin: 0px; text-align: left;">demonhunterg@gmail.com</button>
+                <button class="footerItem9" id="footerButton" style="margin: 0px; text-align: left;">mon@mona.media</button>
+                <img src="../image/Skype.png" class="footerItem7" style="height: 15px; width: 15px; color: black;">
+                <button class="footerItem8" id="footerButton" style="margin: 0px; text-align: left;">demonhunterp</button>
+            </div>
         </div>
         <div style="margin-top: 20px">
             <h2 style="color: white"><b>Hỗ trợ</b></h2>
@@ -326,7 +364,7 @@
         </div>
     </div>
 </div>
-<button onclick="topFunction()" id="backToTop">Top</button>
+<button onclick="topFunction()" id="backToTop" style="display: none;"><i class="fa-sharp fa-solid fa-arrow-up fa-xl"></i></button>
 <script>
     let topButton = document.getElementById("backToTop");
     window.onscroll = function() {scrollFunction()};

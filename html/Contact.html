@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="..\html\fontawesome-free-6.3.0-web\fontawesome-free-6.3.0-web\css\all.min.css">
+    <title>Document</title>
+</head>
+<style>
+    ::placeholder {
+        color: #757575;
+        font-weight: normal;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    input[type=text] {
+        border: 1px solid #DDDDDD;
+    }
+
+    input[type=text]:focus {
+        border: 1px solid #000000;
+    }
+
+    textarea {
+        border: 1px solid #DDDDDD;
+    }
+
+    textarea:focus {
+        border: 1px solid #000000;
+    }
+
+    .footerItem1 { grid-area: icon1; }
+    .footerItem2 { grid-area: text1; }
+    .footerItem3 { grid-area: icon2; }
+    .footerItem4 { grid-area: text2; }
+    .footerItem5 { grid-area: icon3; }
+    .footerItem6 { grid-area: text3; }
+    .footerItem7 { grid-area: icon4; }
+    .footerItem8 { grid-area: text4; }
+    .footerItem9 { grid-area: text5; }
+    .insideGridItem { grid-area: picture; }
+
+    .formItem1 { grid-area: name; }
+    .formItem2 { grid-area: email; }
+    .formItem3 { grid-area: phone; }
+    .formItem4 { grid-area: address; }
+    .formItem5 { grid-area: message; }
+    .formItem6 { grid-area: submit; }
+
+    body {
+        margin: 0px;
+    }
+
+    #Hotbar{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        color: #6C6465;
+        background-color: #261A1B;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #login {
+        padding: 0;
+        border: none;
+        background: none;
+        color: #6C6465;
+    }
+
+    #login:hover {
+        color: red;
+        cursor: pointer;
+    }
+
+    #Menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: #302021;
+        height: 125px;
+        align-items: center;
+    }
+
+    #logo {
+        width: 30%;
+    }
+
+    #Phone {
+        margin: none;
+        text-decoration: none;
+        color: white;
+        width: 10%;
+    }
+
+    #Index {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+        align-items: center;
+        background-color: #FFCA44;
+        height: 50px;
+    }
+
+    #MenuButton {
+        padding: 0;
+        border: none;
+        background: none;
+        font-size: 18px;
+        color: #594129;
+    }
+
+    #MenuButton:hover{
+        color: red;
+        cursor: pointer;
+    }
+
+    #banner{
+        width: 100%;
+        height: 200px;
+    }
+
+    #title {
+        position: absolute;
+        top: 34%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+    }
+
+    #titleButton {
+        color: white;
+        font-size: 17px;
+        position: absolute;
+        top: 44%;
+        left: 43.7%;
+        padding: 0px;
+        border: 0px;
+        background: 0px;
+        display: inline;
+    }
+
+    #titleButton:hover {
+        cursor: pointer;
+    }
+
+    #subTitle {
+        font-size: 19px;
+        color: white;
+        position: absolute;
+        top: 43.7%;
+        left: 50.7%;
+    }
+
+    #flex-container {
+        display: flex;
+        width: 100%;
+        height: 650px;
+        justify-content: center;
+        gap: 50px;
+        margin-top: 50px;
+    }
+
+    #flex-container-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    #inside-grid {
+        display: grid;
+        grid-template-areas:
+            'picture icon1 text1'
+            'picture icon2 text2'
+            'picture icon3 text3'
+            'picture icon3 text5'
+            'picture icon4 text4';
+        grid-template-columns: 150px 20px 350px;
+        row-gap: 7px;
+        column-gap: 20px;
+    }
+
+    #grid-button {
+        background: none;
+        border: none;
+        padding: 0;
+        font-size: 15px;
+        margin-top: 10px;
+        display: block;
+        color: black;
+    }
+
+    #grid-button:hover {
+        color:#FFCD4C;
+        cursor: pointer;
+    }
+
+    #form-container {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        align-items: center;
+        justify-content: center;
+        height: 337px;
+        width: 500px;
+        gap: 10px;
+    }
+
+    #form {
+        display: grid;
+        grid-template-areas:
+            'name email'
+            'phone address'
+            'message message';
+        grid-template-rows: 40px 40px 150px;
+        gap: 15px;
+    }
+
+    #form-submit {
+        width: 91%; 
+        height: 25px;
+        background-color: #A0BE29;
+    }
+
+    #form-submit:hover {
+        background-color: #c5ea34;
+    }
+
+    #form-submit:active {
+        background-color: #A0BE29;
+    }
+
+    #footer {
+        background-color: #302021;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #footerButton {
+        background: none;
+        border: none;
+        color: #A4A4A4;
+        padding: 0;
+        font-size: 15px;
+        margin-top: 10px;
+        display: block;
+    }
+
+    #footerButton:hover {
+        color:#FFCD4C;
+        cursor: pointer;
+    }
+
+    #footer-grid {
+        display: grid;
+        grid-template-areas: 
+            'icon1 text1'
+            'icon2 text2'
+            'icon3 text3'
+            'icon3 text5'
+            'icon4 text4';
+        grid-template-rows: 40px 20px 20px 20px;
+        column-gap: 15px;
+        row-gap: 7px;
+    }
+
+    #backToTop {
+        position: fixed;
+        background-color: white;
+        height: 50px;
+        width: 50px;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+
+    #backToTop:hover {
+        background-color: red;
+        color: white;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+</style>
+<body style="background-color: #F6F5F3">
+    <div id="Hotbar">
+        <div>
+            <i class="fa-sharp fa-solid fa-house"></i>
+            HOME: 319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-clock"></i>
+            Open Mon-Fri: 6:30AM to 7PM, Sat: 8AM to 5PM
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-envelope"></i>
+            info@themerex.ne
+        </div>
+        <div>
+            <i class="fa-sharp fa-solid fa-arrow-right"></i>
+            <button id="login">Login</button>
+        </div>
+    </div>
+    <div id="Menu">
+        <div id="logo">
+            <a href="..\html\MainMenu.html">
+                <img src=..\image\Icon.png>
+            </a>
+        </div>
+        <div>
+            <a id="Phone" href="">Call Us 076 922 0162 <i class="fa-sharp fa-solid fa-phone-volume fa-xl" style="color: #FFCD4C"></i></a>               
+        </div>
+        <div style="color: white">GIỎ HÀNG/Ođ <i class="fa-sharp fa-solid fa-cart-shopping" style="color:#FFCD4C"></i></div>
+        <div><i class="fa-sharp fa-solid fa-magnifying-glass" style="color: #FFCD4C"></i></div>
+    </div>
+    <div id="Index">
+        <div>
+            <button id="MenuButton" onclick="location.href='../html/MainMenu.html'"><b>Trang Chủ</b></button>
+        </div>
+        <div>
+            <button onclick="window.location.href='../html/Introduction.html'" id="MenuButton"><b>Giới Thiệu</b></button>
+        </div>
+        <div>
+            <button id="MenuButton"><b>Cửa Hàng</b></button>
+        </div>
+        <div>
+            <button onclick="window.location.href='../html/News.html'" id="MenuButton"><b>Tin Tức</b></button>
+        </div>
+        <div>
+            <button onclick="window.location.href='../html/Contact.html'" id="MenuButton"><b>Liên hệ</b></button>
+        </div>
+    </div>
+    <div id="banner">
+        <img src="../image/dogs.jpg" 
+        style="width: 100%; height: 200px; object-fit: cover; object-position: 30% 30%; filter: brightness(70%)">
+        <h1 id="title">LIÊN HỆ</h1>
+        <button onclick="window.location.href='../html/MainMenu.html'" id="titleButton">TRANG CHỦ</button>
+        <div id="subTitle"><b>/LIÊN HỆ</b></div>
+    </div>
+    <div id="flex-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.444648221367!2d106.65305601442796!3d10.777216392320978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ec71b65f0d9%3A0x67b4c06bc6071bd4!2zQzE2LCAzMTkgTMO9IFRoxrDhu51uZyBLaeG7h3QsIFBoxrDhu51uZyAxNSwgUXXhuq1uIDExLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1678331821570!5m2!1svi!2s" 
+        width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="flex-container-2">
+            <div id="inside-grid">
+                <img src="../image/logo-mona.png" class="insideGridItem" style="width: 150px; height: 125px;">
+                <div class="footerItem1"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                <div class="footerItem2" style="text-align: left; margin: 0px; font-size: 18px; color: #353535;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
+                <div class="footerItem3"><i class="fa-sharp fa-solid fa-phone"></i></div>
+                <button class="footerItem4" id="grid-button" style="margin: 0px; text-align: left; font-size: 18px;">076 922 0162</button>
+                <div class="footerItem5"><i class="fa-sharp fa-solid fa-envelope"></i></div>
+                <button class="footerItem6" id="grid-button" style="margin: 0px; text-align: left; font-size: 18px;">demonhunterg@gmail.com</button>
+                <button class="footerItem9" id="grid-button" style="margin: 0px; text-align: left; font-size: 18px;">mon@mona.media</button>
+                <img src="../image/white-skype.png" class="footerItem7" style="height: 15px; width: 15px; color: black;">
+                <button class="footerItem8" id="grid-button" style="margin: 0px; text-align: left; font-size: 18px;">demonhunterp</button>
+            </div>            <h1><b>LIÊN HỆ VỚI CHÚNG TÔI</b></h1>
+            <div id="form-container">
+                <form id="form">
+                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Họ và tên" class="formItem1">
+                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Email" class="formItem2">
+                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Số điện thoại" class="formItem3">
+                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Địa chỉ" class="formItem4" style="background-color: #F6F5F3; border: none;">
+                    <textarea rol="50" col="62" placeholder="Lời nhắn" style="background-color: #F6F5F3; padding: 10px" class="formItem5"></textarea>
+                </form>
+                <button id="form-submit"><b>GỬI</b></button>
+            </div>
+        </div>
+    </div>
+    <div id="footer" style="margin-top: 20px;">
+            <div id="logo" style="margin-top: 40px;">
+                <a href="..\html\MainMenu.html">
+                    <img src="..\image\Icon.png" style="width: 80px; height: 70px">
+                </a>
+                <div style="color: #A4A4A4; width: 60%; margin-top: 15px">
+                    Thú cưng của bạn đang ở trong tay tốt với đội ngũ bác sĩ thú y, chú rể và huấn luyện viên chuyên nghiệp của chúng tôi. Chúng tôi cung cấp động vật của bạn chỉ là một dịch vụ chất lượng hàng đầu.
+                </div>
+            </div>
+            <div style="margin-top: 20px">
+                <h2 style="color: white"><b>Liên hệ</b></h2>
+                <div id="footer-grid">
+                    <div class="footerItem1"><i class="fa-sharp fa-solid fa-location-dot" style="color:white"></i></div>
+                    <div class="footerItem2" style="color: #A4A4A4; width: 70%; text-align: left; margin: 0px; font-size: 18px;">319 C16 Lý Thường Kiệt, Phường 15, Quận 11, Tp.HCM</div>
+                    <div class="footerItem3"><i class="fa-sharp fa-solid fa-phone" style="color: white"></i></div>
+                    <button class="footerItem4" id="footerButton" style="margin: 0px; text-align: left;">076 922 0162</button>
+                    <div class="footerItem5" style="color: white;"><i class="fa-sharp fa-solid fa-envelope"></i></div>
+                    <button class="footerItem6" id="footerButton" style="margin: 0px; text-align: left;">demonhunterg@gmail.com</button>
+                    <button class="footerItem9" id="footerButton" style="margin: 0px; text-align: left;">mon@mona.media</button>
+                    <img src="../image/Skype.png" class="footerItem7" style="height: 15px; width: 15px; color: black;">
+                    <button class="footerItem8" id="footerButton" style="margin: 0px; text-align: left;">demonhunterp</button>
+                </div>
+            </div>
+            <div style="margin-top: 20px">
+                <h2 style="color: white"><b>Hỗ trợ</b></h2>
+                <button id="footerButton">FAQ</button>
+                <button id="footerButton">Chăm sóc khách hàng</button>
+                <button id="footerButton">Vận chuyển và Đổi trả hàng</button>
+                <button id="footerButton">Liên hệ</button>
+            </div>
+        </div>
+</div>
+<button onclick="topFunction()" id="backToTop" style="display: none;"><i class="fa-sharp fa-solid fa-arrow-up fa-xl"></i></button>
+<script>
+    let topButton = document.getElementById("backToTop");
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topButton.style.display = "block";
+        } else {
+            topButton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

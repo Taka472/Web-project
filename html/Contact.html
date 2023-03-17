@@ -215,7 +215,8 @@
         grid-template-areas:
             'name email'
             'phone address'
-            'message message';
+            'message message'
+            'submit submit';
         grid-template-rows: 40px 40px 150px;
         gap: 15px;
     }
@@ -339,7 +340,7 @@
     </div>
     <div id="banner">
         <img src="../image/dogs.jpg" 
-        style="width: 100%; height: 200px; object-fit: cover; object-position: 30% 30%; filter: brightness(70%)">
+        style="width: 100%; height: 200px; object-fit: cover; object-position: 30% 30%; filter: brightness(70%);">
         <h1 id="title">LIÊN HỆ</h1>
         <button onclick="window.location.href='../html/MainMenu.html'" id="titleButton">TRANG CHỦ</button>
         <div id="subTitle"><b>/LIÊN HỆ</b></div>
@@ -361,14 +362,14 @@
                 <button class="footerItem8" id="grid-button" style="margin: 0px; text-align: left; font-size: 18px;">demonhunterp</button>
             </div>            <h1><b>LIÊN HỆ VỚI CHÚNG TÔI</b></h1>
             <div id="form-container">
-                <form id="form" spellcheck="false">
-                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Họ và tên" class="formItem1">
-                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Email" class="formItem2">
-                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Số điện thoại" class="formItem3">
-                    <input type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Địa chỉ" class="formItem4" style="background-color: #F6F5F3; border: none;">
-                    <textarea rol="50" col="62" placeholder="Lời nhắn" style="background-color: #F6F5F3; padding: 10px" class="formItem5"></textarea>
+                <form id="form" spellcheck="false" method="post" action="#">
+                    <input name="name" type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Họ và tên" class="formItem1">
+                    <input name="email" type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Email" class="formItem2">
+                    <input name="number" type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Số điện thoại" class="formItem3">
+                    <input name="address" type="text" style="width: 205px; height: 40px; background-color: #F6F5F3; padding-left: 10px" placeholder="Địa chỉ" class="formItem4" style="background-color: #F6F5F3; border: none;">
+                    <textarea name="message" rol="50" col="62" placeholder="Lời nhắn" style="background-color: #F6F5F3; padding: 10px" class="formItem5"></textarea>
+                    <input id="form-submit" type="submit" style="width: 100%;" value="GỬI" class="formItem6">
                 </form>
-                <button id="form-submit"><b>GỬI</b></button>
             </div>
         </div>
     </div>

@@ -23,10 +23,10 @@
         display: fixed;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         background-color: #FFCA44;
         width: 250px;
         gap: 50px;
-        padding-top: 100px;
     }
 
     #navButton {
@@ -63,6 +63,91 @@
         justify-content: center;
         min-height: 100vh;
     }
+
+    #loginBox {
+        background-color: #FFCA44;
+        height: 450px;
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #loginButton {
+        margin-top: 30px;
+        height: 50px;
+        width: 200px;
+    }
+
+    #loginButton:hover {
+        cursor: pointer;
+    }
+
+    .buttonPanel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+
+    .buttonPanel > button {
+        height: 75px;
+        width: 200px;
+        border-radius: 20px; 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border: none;
+    }
+
+    .buttonPanel > #numbered > div:nth-child(1) {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;
+        font-size: 40px;
+    }
+  
+    .buttonPanel > button:hover {
+        cursor: pointer;
+    }
+
+    .green {
+        background-color:rgb(0, 190, 0);
+    }
+
+    .green:active {
+        background-color:rgb(0, 144, 0);
+    }
+
+    .yellow {
+        background-color: rgb(232, 174, 0);
+    }
+
+    .yellow:active {
+        background-color:rgb(189, 142, 0);
+    }
+
+    .blue {
+        background-color: rgb(0, 213, 255);
+    }
+
+    .blue:active {
+        background-color: rgb(2, 179, 214);
+    }
+
+    .pink {
+        background-color: pink;
+    }
+
+    .pink:active {
+        background-color: rgb(208, 158, 166);
+    }
 </style>
 <body>
     <div id="wrapper">
@@ -88,34 +173,127 @@
                 <div id="Banner">
                     <img src="../image/Icon.png">
                 </div>
+                <div class="buttonPanel">
+                    <button id="numbered" class="green">
+                        <div><b>0</b></div>
+                        <div style="font-size: 25px;"><b>Messages</b></div>
+                    </button>
+                    <button id="numbered" class="yellow">
+                        <div><b>0</b></div>
+                        <div style="font-size: 25px"><b>Contacts</b></div>
+                    </button>
+                    <button class="blue">
+                        <div style="font-size: 25px;"><b>Web controller</b></div>
+                    </button>
+                    <button onclick="LogOut()" class="pink">
+                        <i class="fa-sharp fa-solid fa-right-from-bracket fa-2xl"></i>
+                        <div style="font-size: 25px;"><b>Log out</b></div>
+                    </button>
+                </div>
             </div>
-            <div  class="content">2</div>
-            <div  class="content">3</div>
-            <div  class="content">4</div>
-            <div  class="content">5</div>
+            <div  class="content">
+                <div id="Banner">
+                    <img src="../image/Icon.png">
+                </div>
+            </div>
+            <div  class="content">
+                <div id="Banner">
+                    <img src="../image/Icon.png">
+                </div>
+            </div>
+            <div  class="content">
+                <div id="Banner">
+                    <img src="../image/Icon.png">
+                </div>
+            </div>
+            <div  class="content">
+                <div id="Banner">
+                    <img src="../image/Icon.png">
+                </div>
+            </div>
+            <div  class="content">
+                <div id="Banner">
+                    <img src="../image/Icon.png">
+                </div>
+            </div>
+        </div>       
+    </div>
+
+    <script>
+        function LogOut() {
+            document.getElementById("wrapper").style.display = "none";
+            document.getElementById("login").style.display = "flex";
+            document.getElementById("username").value = '';
+            document.getElementById("password").value = '';
+        }
+    </script>
+
+    <script>
+        showDiv(0);
+
+        function showDiv(n) {
+            var x = document.getElementsByClassName("content");
+            for (var i = 0; i < x.length; i++) {
+                if (i != n) x[i].style.display = "none";
+                else x[i].style.display = "block";
+            }
+        }
+    </script>
+
+    <div id="login">
+        <div id="loginBox" spellcheck="false">
+            <h1 style="font-size: 70px; font-family:'Times New Roman', Times, serif">Login Admin</h1>
+            <form style="display: flex; flex-direction: column; align-items: start-flex;">
+                <label for="username" style="font-size: 20px;">Username: <br></label>
+                <input id="username" type="text" placeholder="username" style="height: 30px; width: 400px; font-size: 20px; padding-left: 10px; padding-right: 10px;">
+                <label for="password" style="font-size: 20px; margin-top: 10px;">Password: <br></label>
+                <input id="password" type="password" placeholder="password" style="height: 30px; width: 400px; font-size: 20px; padding-left: 10px; padding-right: 10px;">  
+            </form>
+            <div id="wrongInput" style="color: #FFCA44; font-size: 18px;">Password or username incorrect</div> 
+            <button onclick="checkInput()" id="loginButton">Login</button>
         </div>
 
         <script>
-            showDiv(0);
+            document.getElementById("wrapper").style.display = "none";
+            document.getElementById("login").style.display = "flex";
 
-            function showDiv(n) {
-                var x = document.getElementsByClassName("content");
-                for (var i = 0; i < x.length; i++) {
-                    if (i != n) x[i].style.display = "none";
-                    else x[i].style.display = "block";
+            var inputField = document.getElementById("username");
+            inputField.addEventListener("keypress", function(event) {
+                if (event.key == "Enter") {
+                    event.preventDefault();
+                    document.getElementById("password").focus();
+                }
+            });
+
+            var inputField = document.getElementById("password");
+            inputField.addEventListener("keypress", function(event) {
+                if (event.key == "Enter") {
+                    event.preventDefault();
+                    document.getElementById("loginButton").click();
+                }
+            });
+
+            function checkInput() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                if (username == "tranlehuy0407" && password == "tranlehuy") {
+                    document.getElementById("wrapper").style.display = "flex";
+                    document.getElementById("login").style.display = "none";
+                }
+                else {
+                    document.getElementById("wrongInput").style.color = "red";
+                }
+            }
+
+            window.onbeforeunload = InstantLogin();
+
+            function InstantLogin() {
+                if (document.getElementById("login").style.display == "") {
+                    document.getElementById("wrapper").style.display = "flex";
+                    document.getElementById("login").style.display = "none";
                 }
             }
         </script>
     </div>
-
-    <div id="login">
-
-    </div>
-
-    <script>
-        var page = document.getElementById("wrapper");
-        page.style.display = "none";
-    </script>
-
 </body>
 </html>

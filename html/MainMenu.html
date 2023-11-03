@@ -178,6 +178,14 @@
         cursor: pointer;
     }
 
+    .hide {
+        position:absolute; 
+        top:-1px; 
+        left:-1px; 
+        width:1px; 
+        height:1px;
+    }
+
     #form{
         display: flex;
         flex-direction: column;
@@ -331,6 +339,7 @@
     }
 </style>
 <body>
+    <iframe name="hiddenFrame" class="hide"></iframe>
     <div id="flex-container">
         <div id="Hotbar">
             <div>
@@ -392,12 +401,12 @@
                     </div>
                     <img src="..\image\slider-cat.png" height="400" width="500">
                     <div>
-                        <form id="form"spellcheck="false" method="post" action="#">
+                        <form id="form"spellcheck="false" method="post" action="submit.php" target="hiddenFrame">
                             <div style="font-size: 30px;"><b>TƯ VẤN MIỄN PHÍ</b></div>
-                            <input name="email" type="text" placeholder="Email">
-                            <input name="name" type="text" placeholder="Họ và tên">
-                            <textarea name="message" rows="10" cols="31" placeholder="Lời nhắn"></textarea>
-                            <input type="submit" id="Submit" style="border: none;" value="GỬI">
+                            <input name="Email" type="text" placeholder="Email">
+                            <input name="Name" type="text" placeholder="Họ và tên">
+                            <textarea name="Message" rows="10" cols="31" placeholder="Lời nhắn"></textarea>
+                            <input name="Submit" type="submit" id="Submit" style="border: none;" value="GỬI">
                         </form>
                     </div>
                     <button onclick="plusDivs(1)" id="nextButton"><i class="fa-solid fa-arrow-right fa-xl"></i></i></button>
@@ -415,12 +424,12 @@
                     </div>
                     <img src="..\image\slider-dog-small.png" height="410" width="330" style="object-fit: cover">
                     <div>
-                        <form id="form" spellcheck="false">
+                        <form id="form" spellcheck="false" method="post" action="submit.php" target="hiddenFrame">
                             <div style="font-size: 30px;"><b>TƯ VẤN MIỄN PHÍ</b></div>
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Họ và tên">
-                            <textarea rows="10" cols="31" placeholder="Lời nhắn"></textarea>
-                            <input type="submit" id="Submit" style="border: none;" value="GỬI">
+                            <input name="Email" type="text" placeholder="Email">
+                            <input name="Name" type="text" placeholder="Họ và tên">
+                            <textarea name="Message" rows="10" cols="31" placeholder="Lời nhắn"></textarea>
+                            <input name="Submit" type="submit" id="Submit" style="border: none;" value="GỬI">
                         </form>
                     </div>
                     <button onclick="plusDivs(1)" id="nextButton"><i class="fa-solid fa-arrow-right fa-xl"></i></i></button>
@@ -438,12 +447,12 @@
                     </div>
                     <img src="..\image\slider-dog.png" height="400" width="500">
                     <div>
-                        <form id="form" spellcheck="false">
+                        <form id="form" spellcheck="false" method="post" action="submit.php" target="hiddenFrame5">
                             <div style="font-size: 30px;"><b>TƯ VẤN MIỄN PHÍ</b></div>
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Họ và tên">
-                            <textarea rows="10" cols="31" placeholder="Lời nhắn"></textarea>
-                            <input type="submit" id="Submit" style="border: none;" value="GỬI">
+                            <input name="Email" type="text" placeholder="Email">
+                            <input name="Name" type="text" placeholder="Họ và tên">
+                            <textarea name="Message" rows="10" cols="31" placeholder="Lời nhắn"></textarea>
+                            <input name="Submit" type="submit" id="Submit" style="border: none;" value="GỬI">
                         </form>
                     </div>
                     <button onclick="plusDivs(1)" id="nextButton"><i class="fa-solid fa-arrow-right fa-xl"></i></i></button>
@@ -469,6 +478,12 @@
                 x[slideIndex - 1].style.display = "block";
             }
         </script>
+        <div id="Login">
+
+        </div>
+        <div id="Register">
+
+        </div>
         <div id="content">
             <h1 style="margin-top: 100px; font-size: 50px;">Chúng tôi làm gì?</h1>
             <div style="font-size: 20px; margin-top: 20px;">Thú cưng của bạn đang ở trong tay tốt với đội ngũ chuyên nghiệp của chúng tôi.</div>
@@ -496,21 +511,21 @@
             <div id="contentWithPic1">
                 <div id="container">
                     <div id="item1">
-                        <h2 class="item1" style="display:inline-block; text-align: right;">điều trị thú cưng</h2>
+                        <h2 class="item1" style="display:inline-block; text-align: right;">Điều trị thú cưng</h2>
                         <img class="item3" src="..\image\1.png">
                         <div class="item2" style="text-align: right">
                             Chăm sóc thú cưng không chỉ là những gì chúng ta làm, mà là những gì chúng ta yêu thích và đam mê.
                         </div>
                     </div>
                     <div id="item1">
-                        <h2 class="item1" style="display:inline-block; text-align: right">chải chuốt</h2>
+                        <h2 class="item1" style="display:inline-block; text-align: right">Chải chuốt</h2>
                         <img class="item3" src="..\image\2.png">
                         <div class="item2" style="text-align: right">
                             Đội ngũ các nhà tạo mẫu tóc thú cưng của chúng tôi rất vui khi làm cho con vật yêu quý của bạn trông thật xinh đẹp.
                         </div>
                     </div>
                     <div id="item1">
-                        <h2 class="item1" style="display:inline-block; text-align: right">cửa hàng</h2>
+                        <h2 class="item1" style="display:inline-block; text-align: right">Cửa hàng</h2>
                         <img class="item3" src="..\image\3.png">
                         <div class="item2" style="text-align: right;">
                             Nhận các phụ kiện thú cưng tốt nhất trong cửa hàng của chúng tôi để chăm sóc thú cưng của bạn và làm cho nó hạnh phúc.
@@ -520,21 +535,21 @@
                 <img src="..\image\home_responsive_3.jpg" style="width: 300px; height: 500px;">
                 <div id="container">
                     <div id="item2">
-                        <h2 class="item1" style="display:inline-block; text-align: left;">cho thú cưng</h2>
+                        <h2 class="item1" style="display:inline-block; text-align: left;">Cho thú cưng</h2>
                         <img class="item3" src="..\image\6.png">
                         <div class="item2" style="text-align: left">
                             Nếu bạn đang cân nhắc việc nuôi thú cưng, chúng tôi sẽ hướng dẫn bạn cách làm cho cuộc sống của anh ấy thoải mái.
                         </div>
                     </div>
                     <div id="item2">
-                        <h2 class="item1" style="display:inline-block; text-align: left;">khách sạn thú cưng</h2>
+                        <h2 class="item1" style="display:inline-block; text-align: left;">Khách sạn thú cưng</h2>
                         <img class="item3" src="../image/4.png">
                         <div class="item2" style="text-align: left">
                             Chúng tôi cung cấp cho thú cưng của bạn an toàn, thoải mái cho thú cưng và các dịch vụ dưới sự giám sát 24/7.
                         </div>
                     </div>
                     <div id="item2">
-                        <h2 class="item1" style="display:inline-block; text-align: left;">thú y</h2>
+                        <h2 class="item1" style="display:inline-block; text-align: left;">Thú y</h2>
                         <img class="item3" src="../image/5.png">
                         <div class="item2" style="text-align: left;">
                             Chúng tôi cung cấp nhiều dịch vụ y tế cho thú cưng yêu quý của bạn để sống cuộc sống hạnh phúc lâu dài trong nhà của bạn.

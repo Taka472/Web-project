@@ -190,6 +190,31 @@
                         <div style="font-size: 25px;"><b>Log out</b></div>
                     </button>
                 </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                <canvas id="lineChart" style="width: 100%; max-width: 600px;"></canvas>
+                <script>
+                    const xValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+                    const yValue = [0, 10, 14, 20, 40, 50, 100, 80, 90, 120];
+                    new Chart("lineChart", {
+                        type: "line",
+                        data: {
+                            labels: xValue,
+                            datasets: [{
+                                fill: false,
+                                lineTension: 0,
+                                backgroundColor: "rgba(0, 0, 255, 1, 0)",
+                                borderColor: "rgba(0, 0, 255, 0, 1)",
+                                data: yValue 
+                            }]
+                        },
+                        option: {
+                            legend: {display: false},
+                            scales: {
+                                yAxes: [{ticks: {min: 0, max: 150}}],
+                            }
+                        }
+                    });
+                </script>
             </div>
             <div  class="content">
                 <div id="Banner">
